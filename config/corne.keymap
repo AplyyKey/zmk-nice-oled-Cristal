@@ -53,7 +53,7 @@
             bindings = <
 &none  &trans  &trans  &trans  &trans  &trans    &trans      &kt C_AC_HOME  &kt UP_ARROW    &kt END    &kt C_VOLUME_UP  &trans
 &none  &trans  &trans  &trans  &trans  &trans    &kt K_MUTE  &kt LEFT       &kt DOWN_ARROW  &kt RIGHT  &kt C_VOL_DN     &trans
-&none  &trans  &trans  &trans  &trans  &trans    &trans      &trans         &trans          &trans     &kp C_MUTE       &none
+&none  &trans  &trans  &none   &trans  &trans    &trans      &trans         &trans          &trans     &kp C_MUTE       &none
                        &none   &none   &none     &none       &none          &none
             >;
         };
