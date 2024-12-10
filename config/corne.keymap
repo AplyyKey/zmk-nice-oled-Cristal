@@ -24,22 +24,7 @@
 &kp TAB                  &kp Q  &kp W  &kp E     &kp R  &kp T                 &kp Y        &kp U  &kp I                   &kp O    &kp P     &kp BSPC
 &mt LEFT_SHIFT ESC       &kp A  &kp S  &kp D     &kp F  &kp G                 &kp H        &kp J  &kp K                   &kp L    &kp SEMI  &kp SQT
 &mt LEFT_CONTROL DELETE  &kp Z  &kp X  &kp C     &kp V  &kp B                 &kp N        &kp M  &kp COMMA               &kp DOT  &kp FSLH  &kp ENTER
-                                       &kp LGUI  &mo 1  &mt LEFT_ALT SPACE    &lt 3 SPACE  &mo 2  &mt RIGHT_ALT CAPSLOCK
-            >;
-        };
-
-        FUNC {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &kt K_PLAY_PAUSE  &kt C_AC_HOME  &kt UP_ARROW    &kt END    &kt C_VOLUME_UP  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &kt K_MUTE        &kt LEFT       &kt DOWN_ARROW  &kt RIGHT  &kt C_VOL_DN     &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans            &trans         &trans          &trans     &trans           &trans
-                        &trans  &trans  &kp SPACE    &kp RET           &trans         &trans
+                                       &kp LGUI  &mo 1  &mt LEFT_ALT SPACE    &lt 3 SPACE  &mo 3  &mt RIGHT_ALT CAPSLOCK
             >;
         };
 
@@ -54,16 +39,31 @@
 &trans  &kp EXCLAMATION  &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &trans           &trans        &trans        &trans        &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                       &trans        &mo 3         &kp SPACE       &kp RET    &trans     &trans
+                                       &trans        &mo 4         &kp SPACE       &trans     &trans     &trans
+            >;
+        };
+
+        FUNC {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&none  &trans  &trans  &trans  &trans  &trans    &trans      &kt C_AC_HOME  &kt UP_ARROW    &kt END    &kt C_VOLUME_UP  &trans
+&none  &trans  &trans  &trans  &trans  &trans    &kt K_MUTE  &kt LEFT       &kt DOWN_ARROW  &kt RIGHT  &kt C_VOL_DN     &trans
+&none  &trans  &trans  &trans  &trans  &trans    &trans      &trans         &trans          &trans     &kp C_MUTE       &none
+                       &none   &none   &none     &none       &none          &none
             >;
         };
 
         MODS {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3        &kp F4  &kp F5       &kt PLUS         &kt KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kt ASTERISK  &trans
+&none   &kp F1   &kp F2   &kp F3        &kp F4  &kp F5       &kt PLUS         &kt KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kt ASTERISK  &trans
 &trans  &kt F6   &kt F7   &kt F8        &kt F9  &kt F10      &kt MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kt SLASH     &trans
 &trans  &kp F11  &kp F12  &trans        &trans  &trans       &kt KP_NUMBER_0  &kt KP_NUMBER_1  &kt KP_NUMBER_2  &kt KP_NUMBER_3  &kt EQUAL     &trans
-                          &kp LEFT_WIN  &trans  &kp SPACE    &kp ENTER        &kp N0           &kp RIGHT_ALT
+                          &kp LEFT_WIN  &trans  &kp SPACE    &lt 4 SPACE      &kp N0           &kp RIGHT_ALT
             >;
         };
     };
